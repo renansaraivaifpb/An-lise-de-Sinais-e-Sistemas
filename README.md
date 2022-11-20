@@ -5,7 +5,7 @@
 // Renan Saraiva dos Santos
 
 
-# Função Unitário
+## Função Unitário
 // A função em questão é definita por u(t - a) e dada por:
 
 // O degrau unitário assumirá valores diferente de zero quando o tempo for
@@ -15,13 +15,13 @@
 ![alt text](funcaounitaria.png)
 
 
-# Sinal do tipo Rampa
+## Sinal do tipo Rampa
 
 // Definição para Sinal do tipo Rampa:
 // "um sinal em rampa, x(t) = t, aumenta indefinidamente quando |t|→∞ e nem a energia nem a potência existirão para este sinal"
 
 
-`// definição de intervalo
+// definição de intervalo
 t = -6:0.01:6;
 
 // desenvolvimento do sinal rampa
@@ -30,19 +30,19 @@ t = -6:0.01:6;
 // e que, por definição da função degrau, temos u(t) = 0, para t < 0
 r3 = (-t+3).*(t>=2).*(t<=3);
 // para valores de t = 0 até 2 temos u(t) = 1
-`
+
 
 ![alt text](rampa.png)
-```
-# Exponencial Decrescente
+
+## Exponencial Decrescente
 
 ![alt text](exponencial.png)
 
-# Desenvolva implementação computacional
+## Desenvolva implementação computacional
 ![alt text](faca_sinal.png)
 
 
-// CONDIÇÕES:
+### CONDIÇÕES:
 ```
 elseif tMod > 0 && tMod <=2 then
         // p1 (0, 0) p2 (2, 2) y = mx + b
