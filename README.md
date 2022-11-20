@@ -1,27 +1,28 @@
-# An-lise-de-Sinais-e-Sistemas
-clc
-clear
+# Análise de Sinais e Sistemas
 
-
+# Função Unitário
 // A função em questão é definita por u(t - a) e dada por:
-function [degrau] = u(tempo)
-    if tempo >= 0 then
-        degrau = 1;
-    else
-        degrau = 0;
-    end
-endfunction
+
 // O degrau unitário assumirá valores diferente de zero quando o tempo for
 // maior que zero, pois com isso, já é o suficiente para estudo da 
 // Transformada de Laplace.
-
-
 // O gráfico da função degrau unitário pode ser visualizado dessa forma:
-t = -100:0.01:100; // incrementação do tempo de -100 até 100
-f1 = scf(1);
-clf(f1);
-plot(t,u); // plotagem
-xlabel("t");ylabel("u(t)"); // nomes para eixos
-mtlb_axis([-100 100 -0.1 1.1]);
-title('Função Degrau Unitário');
 ![alt text](funcaounitaria.png)
+
+
+# Sinal do tipo Rampa
+
+// Definição para Sinal do tipo Rampa:
+// "um sinal em rampa, x(t) = t, aumenta indefinidamente quando |t|→∞ e nem a energia nem a potência existirão para este sinal"
+
+
+// definição de intervalo
+t = -6:0.01:6;
+
+// desenvolvimento do sinal rampa
+// a estruturação de tal sinal contêm um degrau do tipo:
+// para t >= 0 temos r3=(-t+3)
+// e que, por definição da função degrau, temos u(t) = 0, para t < 0
+r3 = (-t+3).*(t>=2).*(t<=3);
+// para valores de t = 0 até 2 temos u(t) = 1
+![alt text](rampa.png)
